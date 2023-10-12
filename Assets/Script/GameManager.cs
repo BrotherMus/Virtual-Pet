@@ -29,6 +29,14 @@ public class GameManager : MonoBehaviour
     public int _Coin;
     public TextMeshProUGUI _CoinText;
 
+    [Header("Panel")]
+    public GameObject _ListGamesPanel;
+
+    public void ListGamesPanel()
+    {
+        _ListGamesPanel.SetActive(!_ListGamesPanel.activeSelf);
+    }
+
     private void Start()
     {
         _Health = _MaxHealth;
@@ -36,20 +44,20 @@ public class GameManager : MonoBehaviour
         _Energy = _MaxEnergy;
         _Happiness = _MaxHappiness;
     }
-    public void PlayGames()
-    {
-        if(_Energy > 0)
-        {
-            _Energy--;
-            _Hungry--;
-            _Happiness++;
-            _Coin++;
-        }
-        else
-        {
-            Debug.Log("Dont have Energy to play");
-        }
-    }
+    //public void PlayGames()
+    //{
+    //    if(_Energy > 0)
+    //    {
+    //        _Energy--;
+    //        _Hungry--;
+    //        _Happiness++;
+    //        _Coin++;
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Dont have Energy to play");
+    //    }
+    //}
     public void EatFood()
     {
         if(_Food > 0)
