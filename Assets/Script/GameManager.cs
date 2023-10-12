@@ -78,8 +78,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _FoodText.text = "" + _Food;
-        _CoinText.text = "" + _Coin;
+        _FoodText.text = _Food + "";
+        _CoinText.text = _Coin + "$";
         HealhtSystem();
         HungrySystem();
         EnergySystem();
