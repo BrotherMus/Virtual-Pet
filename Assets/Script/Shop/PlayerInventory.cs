@@ -15,6 +15,8 @@ public class PlayerInventory : MonoBehaviour
     public GameObject itemPrefab;
     public Transform itemParent;
 
+    public List<GameObject> prefab = new List<GameObject>();
+
     private void Awake()
     {
         if (instance == null)
@@ -32,6 +34,20 @@ public class PlayerInventory : MonoBehaviour
         items.Add(item);
         UpdateInventoryDisplay(items);
     }
+
+    public void AddItemChicken(ShopItem item)
+    {
+        items.Add(item);
+        UpdateInventoryDisplayChicken(items);
+    }
+
+    public void AddItemOctopus(ShopItem item)
+    {
+        items.Add(item);
+        UpdateInventoryDisplayOctopus(items);
+    }
+
+
 
     public void RemoveItem(ShopItem item)
     {
@@ -58,17 +74,37 @@ public class PlayerInventory : MonoBehaviour
     public void UpdateInventoryDisplay(List<ShopItem> items)
     {
         // First, remove all existing items from the UI
-        foreach (Transform child in itemParent)
-        {
-            Destroy(child.gameObject);
-        }
+       
 
         // Then, create a new UI element for each item in the inventory
-        foreach (ShopItem item in items)
-        {
+        
             //instantiate = spawn
-            GameObject newItem = Instantiate(itemPrefab, itemParent);
-            newItem.GetComponent<ShopItem>().SetItem(item);
-        }
+            GameObject newItem = Instantiate(prefab[0], itemParent);
+            //newItem.GetComponent<ShopItem>().SetItem(item);
+        
+    }
+
+    public void UpdateInventoryDisplayChicken(List<ShopItem> items)
+    {
+              
+
+        // Then, create a new UI element for each item in the inventory
+        
+            //instantiate = spawn
+            GameObject newItem = Instantiate(prefab[1], itemParent);
+            //newItem.GetComponent<ShopItem>().SetItem(item);
+        
+    }
+
+    public void UpdateInventoryDisplayOctopus(List<ShopItem> items)
+    {
+        
+
+        // Then, create a new UI element for each item in the inventory
+        
+            //instantiate = spawn
+            GameObject newItem = Instantiate(prefab[2], itemParent);
+            //newItem.GetComponent<ShopItem>().SetItem(item);
+        
     }
 }
