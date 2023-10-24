@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 1322060799
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 40c8839bc0bf089c34972e66ead3ed6b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 18aa665146f3800b4962b1a200572e09
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 40c8839bc0bf089c34972e66ead3ed6b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/DEMO/Prefabs/Chickens-Prefabs/Chicken-Dark-1.prefab
+Dependencies: []

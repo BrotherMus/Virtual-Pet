@@ -6,9 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Virtual Pet/Scenes/MainMenu.unity
     guid: 23a061be236a729418f4234d6371051b
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Virtual Pet/Scenes/GameScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 16d5d4c37ac393d4e8a2c40d9101b5b3, type: 2}
