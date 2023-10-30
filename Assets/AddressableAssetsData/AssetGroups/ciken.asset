@@ -16,12 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 95fd2b917c2c96d42b91e78e54333668
-  m_SerializeEntries:
-  - m_GUID: 42f758d8becbe4345ace5f4e28b87941
-    m_Address: Assets/DEMO/Prefabs/Chickens-Prefabs/Chicken-Dark-1.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: eb475d624ec9f6c41b0d20d84dcd6ccd, type: 2}
   m_SchemaSet:

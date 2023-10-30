@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: 2e875d266b00fa2419883f4ff975a2a5
   m_currentHash:
     serializedVersion: 2
-    Hash: fe83ef4277d49b14d81120acd771f782
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,10 +35,10 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 1ef78fdc91a26aa42adbeb3dd9d8424b
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: dc9d2c38fe492f4468ab4b03b00f7b2c
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f92c979a78f86a94580f38aafdddf6ec, type: 2}
   - {fileID: 11400000, guid: 63ee75cc9ef7b0e44b2715c896b00007, type: 2}
   - {fileID: 11400000, guid: 1219491f8f6762f49a52bda2eaef16e5, type: 2}
+  - {fileID: 11400000, guid: bf57c5a6d3f08344689d27a6ecb5ce4d, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -65,9 +66,9 @@ MonoBehaviour:
       - m_Id: ee80cf41b7e2a3d4688faaf34d077742
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 1ef78fdc91a26aa42adbeb3dd9d8424b
-        m_Value: ServerData/[BuildTarget]
+        m_Value: Publish/[BuildTarget]
       - m_Id: dc9d2c38fe492f4468ab4b03b00f7b2c
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://drive.google.com/drive/folders/146ZLJR-B2AW-421tFwBSbezp2m9oXusI/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 7e0cb5adca0482c47b673609fe884405
       m_Name: BuildTarget
