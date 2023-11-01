@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _MenuPanel;
 
 
+
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
@@ -28,6 +29,14 @@ public class MainMenu : MonoBehaviour
     {
         _MenuPanel.SetActive(!_MenuPanel.activeSelf);
         _ProfilePanel.SetActive(!_ProfilePanel.activeSelf);
+    }
+    public void Sound()
+    {
+        
+    }
+    public void Music()
+    {
+
     }
  
    
