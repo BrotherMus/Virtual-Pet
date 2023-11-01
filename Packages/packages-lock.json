@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.nethereum": {
-      "version": "file:D:/Download/Nethereum.Unity-main/Nethereum.Unity-main",
+      "version": "file:D:/dlod/DC Virtual Pet/Nethereum.Unity-main/Nethereum.Unity-main",
       "depth": 0,
       "source": "local",
       "dependencies": {}

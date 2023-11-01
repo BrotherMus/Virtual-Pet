@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.nethereum": "file:D:/Download/Nethereum.Unity-main/Nethereum.Unity-main",
+    "com.nethereum": "file:D:/dlod/DC Virtual Pet/Nethereum.Unity-main/Nethereum.Unity-main",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "2.0.7",
     "com.unity.connect.share": "4.2.3",
