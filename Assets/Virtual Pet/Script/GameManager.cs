@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     public GameObject _GamePanel;
     public GameObject _ShopPanel;
 
+    public int soundToPlay;
+
     public void ListGamesPanel()
     {
         _ListGamesPanel.SetActive(!_ListGamesPanel.activeSelf);
@@ -123,6 +125,7 @@ public class GameManager : MonoBehaviour
         if (_Hungry <= 0)
         {
             Debug.Log("Very Hungry");
+            AudioManager.instance.PlaySFX(soundToPlay);//sound of hungry
         }
     }
     public void EnergySystem()
