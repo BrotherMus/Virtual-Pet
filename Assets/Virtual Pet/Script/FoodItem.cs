@@ -9,11 +9,11 @@ public class FoodItem : MonoBehaviour
     void OnMouseDown()
     {
         // When the player clicks on the food item, feed the pet
-        PetController pet = FindObjectOfType<PetController>();
-        if (pet != null)
-        {
+        //PetController pet = FindObjectOfType<PetController>();
+        //if (pet != null)
+       /* {
             pet.Feed(foodValue);
             Destroy(gameObject); // Remove the food item
-        }
+        }*/
     }
 }

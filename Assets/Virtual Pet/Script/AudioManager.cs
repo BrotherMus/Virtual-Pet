@@ -6,7 +6,15 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource[] music;
-    public AudioSource[] sfx;
+    //public AudioSource[] sfx;
+    public AudioSource src;
+    public AudioClip soundeat1, soundeat2;
+
+    public void ButtonEat()
+    {
+        src.clip = soundeat1;
+        src.Play();
+    }
 
    private void Awake()
     {
@@ -15,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayMusic(0); 
+        //PlayMusic(0); 
     }
 
     void Update()
@@ -27,7 +35,7 @@ public class AudioManager : MonoBehaviour
                 
     }
 
-    public void PlayMusic(int musicToPlay)
+    /*public void PlayMusic(int musicToPlay)
     {
         for (int i = 0; i < music.Length; i++)
         {
@@ -39,7 +47,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(int sfxToPlay)
     {
         sfx[sfxToPlay].Play();
-    }
+    }*/
 
 
 }

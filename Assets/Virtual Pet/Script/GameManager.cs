@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
         if (_Hungry <= 0)
         {
             Debug.Log("Very Hungry");
-            AudioManager.instance.PlaySFX(soundToPlay);//sound of hungry
+            
         }
     }
     public void EnergySystem()
