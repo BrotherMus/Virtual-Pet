@@ -9,6 +9,12 @@ public class AudioManager : MonoBehaviour
     //public AudioSource[] sfx;
     public AudioSource src;
     public AudioClip soundeat1, soundeat2;
+      
+
+    void Start()
+    {
+        
+    }
 
     public void ButtonEat()
     {
@@ -21,10 +27,7 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-        //PlayMusic(0); 
-    }
+    
 
     void Update()
     {
@@ -35,6 +38,7 @@ public class AudioManager : MonoBehaviour
                 
     }
 
+   
     /*public void PlayMusic(int musicToPlay)
     {
         for (int i = 0; i < music.Length; i++)
