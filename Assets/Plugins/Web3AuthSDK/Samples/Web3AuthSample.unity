@@ -1456,7 +1456,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 809331924}
-  - component: {fileID: 809331923}
   - component: {fileID: 809331922}
   - component: {fileID: 809331921}
   m_Layer: 0
@@ -1478,9 +1477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eab2a0bf902d6e4b9c2e968ad89f528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clientId: BECRJpG_q3pWklSTkJeN4OgBsC5Jw6KEH9nbEkvY3Ypu8E2829YC4_VZPzmIUgk8sXAHxDQj5dtWGGVJismabXc
+  clientId: BGP9AMmocGjbMlmwWLFqghfJIx9ODjI3RTm5bEQwnMUtdPSGs7zFDKAfHq0X0F1lxJeBRx-P8sUFGp03PdeNGGQ
   redirectUri: torusapp://com.torus.Web3AuthUnity/auth
-  network: 1
+  network: 4
 --- !u!114 &809331922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,14 +1497,9 @@ MonoBehaviour:
   loginButton: {fileID: 1509531156}
   loginResponseText: {fileID: 529774073}
   logoutButton: {fileID: 14516521}
---- !u!81 &809331923
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809331920}
-  m_Enabled: 1
+  MenuPanel: {fileID: 0}
+  SettingPanel: {fileID: 0}
+  Web3Panel: {fileID: 0}
 --- !u!4 &809331924
 Transform:
   m_ObjectHideFlags: 0

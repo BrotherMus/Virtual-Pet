@@ -12,6 +12,7 @@ using Nethereum.ABI.Encoders;
 using Nethereum.Hex.HexTypes;
 using Nethereum.Web3.Accounts;
 using Nethereum.Web3.Accounts.Managed;
+using UnityEditor.PackageManager;
 
 public class Web3AuthScript : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Web3AuthScript : MonoBehaviour
     private Account account;
     Web3 web3;
     const string rpcURL = "https://rpc.ankr.com/eth";
+    public string Cliendids;
+    public string Networks;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +40,9 @@ public class Web3AuthScript : MonoBehaviour
         
         web3Auth.setOptions(new Web3AuthOptions()
         {
-            clientId = "BEglQSgt4cUWcj6SKRdu5QkOXTsePmMcusG5EAoyjyOYKlVRjIF1iCNnMOTfpzCiunHRrMui8TIwQPXdkQ8Yxuk",
+            clientId = "BGP9AMmocGjbMlmwWLFqghfJIx9ODjI3RTm5bEQwnMUtdPSGs7zFDKAfHq0X0F1lxJeBRx-P8sUFGp03PdeNGGQ",
             redirectUrl = new System.Uri("torusapp://com.torus.Web3AuthUnity/auth"),
-            network = Web3Auth.Network.CYAN,
+            network = Web3Auth.Network.SAPPHIRE_DEVNET,
             loginConfig = new Dictionary<string, LoginConfigItem>
             {
                 {"jwt", loginConfigItem}
@@ -77,7 +80,8 @@ public class Web3AuthScript : MonoBehaviour
         privateKey = response.privKey;
         var newAccount = new Account(privateKey);
         account = newAccount;
-
+        Debug.Log(Cliendids);
+        Debug.Log(Networks);
         Debug.Log(JsonConvert.SerializeObject(response, Formatting.Indented));
         updateConsole(JsonConvert.SerializeObject(response, Formatting.Indented));
     }

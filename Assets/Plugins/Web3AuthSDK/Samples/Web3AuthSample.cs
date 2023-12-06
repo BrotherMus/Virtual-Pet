@@ -6,6 +6,17 @@ using UnityEngine.UI;
 using Newtonsoft.Json;
 using static Web3Auth;
 using UnityEngine.SceneManagement;
+using Nethereum.Web3.Accounts;
+using Nethereum.RPC.Accounts;
+using Nethereum.Web3.Accounts.Managed;
+using System.Collections;
+using TMPro;
+using Nethereum.Web3;
+using Nethereum.Util;
+using Nethereum.Signer;
+using Nethereum.Hex.HexConvertors.Extensions;
+using Nethereum.ABI.Encoders;
+using Nethereum.Hex.HexTypes;
 
 public class Web3AuthSample : MonoBehaviour
 {
@@ -77,10 +88,10 @@ public class Web3AuthSample : MonoBehaviour
                 {"CUSTOM_VERIFIER", loginConfigItem}
             }
             */
-            clientId = "BPi5PB_UiIZ-cPz1GtV5i1I2iOSOHuimiXBI0e-Oe_u6X3oVAbCiAZOTEBtTXw4tsluTITPqA8zMsfxIKMjiqNQ",
+            clientId = "BGP9AMmocGjbMlmwWLFqghfJIx9ODjI3RTm5bEQwnMUtdPSGs7zFDKAfHq0X0F1lxJeBRx-P8sUFGp03PdeNGGQ",
             buildEnv = BuildEnv.PRODUCTION,
             redirectUrl = new Uri("torusapp://com.torus.Web3AuthUnity/auth"),
-            network = Web3Auth.Network.SAPPHIRE_MAINNET
+            network = Web3Auth.Network.SAPPHIRE_DEVNET
         });
         web3Auth.onLogin += onLogin;
         web3Auth.onLogout += onLogout;
@@ -94,13 +105,16 @@ public class Web3AuthSample : MonoBehaviour
         verifierDropdown.AddOptions(verifierList.Select(x => x.name).ToList());
         verifierDropdown.onValueChanged.AddListener(onVerifierDropDownChange);
     }
-
+    private Account account;
     private void onLogin(Web3AuthResponse response)
     {
         loginResponseText.text = JsonConvert.SerializeObject(response, Formatting.Indented);
         var userInfo = JsonConvert.SerializeObject(response.userInfo, Formatting.Indented);
         Debug.Log(userInfo);
-
+        string privateKey = response.privKey;
+        var newAccount = new Account(privateKey);
+        account = newAccount;
+        Debug.Log(account.Address);
         loginButton.gameObject.SetActive(false);
         verifierDropdown.gameObject.SetActive(false);
         emailAddressField.gameObject.SetActive(false);
