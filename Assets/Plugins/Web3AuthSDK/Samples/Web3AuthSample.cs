@@ -17,6 +17,7 @@ using Nethereum.Signer;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.ABI.Encoders;
 using Nethereum.Hex.HexTypes;
+using WalletConnectSharp.Core.Models;
 
 public class Web3AuthSample : MonoBehaviour
 {
@@ -106,6 +107,8 @@ public class Web3AuthSample : MonoBehaviour
         verifierDropdown.onValueChanged.AddListener(onVerifierDropDownChange);
     }
     private Account account;
+    public static string Addresss;
+    public static bool yes;
     private void onLogin(Web3AuthResponse response)
     {
         loginResponseText.text = JsonConvert.SerializeObject(response, Formatting.Indented);
@@ -115,6 +118,7 @@ public class Web3AuthSample : MonoBehaviour
         var newAccount = new Account(privateKey);
         account = newAccount;
         Debug.Log(account.Address);
+        Addresss = account.Address;
         loginButton.gameObject.SetActive(false);
         verifierDropdown.gameObject.SetActive(false);
         emailAddressField.gameObject.SetActive(false);
@@ -122,6 +126,7 @@ public class Web3AuthSample : MonoBehaviour
         //Open panel
         MenuPanel.SetActive(true);
         Web3Panel.SetActive(false);
+        yes = true;
     }
 
     private void onLogout()

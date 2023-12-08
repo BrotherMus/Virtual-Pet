@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using WalletConnectSharp.Core.Models;
 
 public class FilePermissionChecker : MonoBehaviour
 {
@@ -13,9 +14,18 @@ public class FilePermissionChecker : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(MakeMoralisRequest());
-    }
 
+    }
+    private void Update()
+    {
+        if (Web3AuthSample.yes)
+        {
+            WalletAddress = Web3AuthSample.Addresss;
+            StartCoroutine(MakeMoralisRequest());
+            Web3AuthSample.yes = false;
+        }
+
+    }
     IEnumerator MakeMoralisRequest()
     {
         // Construct the URL with the WalletAddress variable
