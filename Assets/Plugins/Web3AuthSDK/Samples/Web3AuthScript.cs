@@ -12,7 +12,6 @@ using Nethereum.ABI.Encoders;
 using Nethereum.Hex.HexTypes;
 using Nethereum.Web3.Accounts;
 using Nethereum.Web3.Accounts.Managed;
-using UnityEditor.PackageManager;
 
 public class Web3AuthScript : MonoBehaviour
 {

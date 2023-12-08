@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 3885256930
+CRC: 2093627907
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: chicken-dark-1
+      Name: pet
       Dependencies: {}
